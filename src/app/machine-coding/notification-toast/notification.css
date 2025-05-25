@@ -1,0 +1,22 @@
+.toast-container{
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.toast {
+    animation: slide 0.5s ease-in-out;
+
+    span {
+        cursor: pointer;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
