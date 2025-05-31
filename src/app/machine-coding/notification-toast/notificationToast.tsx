@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import './notification.css'
 
 type ToastType = "success" | "info" | "warning" | "danger";
 

@@ -1,9 +1,10 @@
-import StarRating from './StarRating'
+"use client"
+import StarRating from "./StarRating"
 
 const StarRatingComponent = () => {
     return (
         <>
-            <StarRating />
+            <StarRating starCount={10}/>
         </>
     )
 }
