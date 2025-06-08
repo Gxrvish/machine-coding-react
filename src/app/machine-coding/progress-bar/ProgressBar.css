@@ -1,0 +1,29 @@
+.wrapwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+    height: 20px;
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+}
+
+.wrapwrap button {
+    border: 1px solid black;
+    padding: 2px;
+}

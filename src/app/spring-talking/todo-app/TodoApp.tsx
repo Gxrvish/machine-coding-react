@@ -76,7 +76,7 @@ export default function Home() {
                         </span>
                         <button
                             onClick={() => handleDelete(todo.id)}
-                            className="text-red-500"
+                            className="cursor-pointer text-red-500"
                         >
                             ✕
                         </button>
