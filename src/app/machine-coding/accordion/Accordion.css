@@ -1,0 +1,22 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.accordion{
+    border: 2px solid black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    position: relative;
+
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.extend{
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+}
