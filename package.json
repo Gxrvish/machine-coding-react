@@ -1,5 +1,5 @@
 {
-    "name": "inscord",
+    "name": "Machine Coding",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -15,16 +15,23 @@
         "react-dom": "^19.0.0"
     },
     "devDependencies": {
-        "@eslint/eslintrc": "^3",
+        "@eslint/eslintrc": "^3.3.1",
         "@tailwindcss/postcss": "^4",
         "@types/node": "^20",
         "@types/react": "^19",
         "@types/react-dom": "^19",
+        "@typescript-eslint/eslint-plugin": "^8.38.0",
+        "@typescript-eslint/parser": "^8.38.0",
         "autoprefixer": "^10.4.21",
-        "eslint": "^9",
-        "eslint-config-next": "15.3.2",
+        "eslint": "^9.31.0",
+        "eslint-config-next": "^15.3.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.3",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "eslint-plugin-unused-imports": "^4.1.4",
         "postcss": "^8.5.4",
+        "prettier": "^3.6.2",
         "tailwindcss": "^4.1.8",
-        "typescript": "^5"
+        "typescript": "^5.8.3"
     }
 }
