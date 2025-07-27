@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
-
-interface ImageItem {
-    download_url: string;
-}
+import React, { useEffect } from "react";
 
 interface PostProps {
-    data: any;
+    data: Array<{
+        download_url: string;
+        [key: string]: unknown;
+    }>;
     setPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
@@ -18,7 +17,9 @@ const Post: React.FC<PostProps> = ({ data, setPage }) => {
                 setPage((prevPage) => prevPage + 1);
             }
         });
-        const lastImage = document.querySelector('.infinite-scroll-image:last-child');
+        const lastImage = document.querySelector(
+            ".infinite-scroll-image:last-child",
+        );
         if (lastImage) {
             observer.observe(lastImage);
         }
@@ -29,7 +30,8 @@ const Post: React.FC<PostProps> = ({ data, setPage }) => {
 
     return (
         <div className="infinite-scroll-container">
-            {data.map((item: any, index: any) => (
+            {data.map((item: any, index: number) => (
+                // eslint-disable-next-line @next/next/no-img-element
                 <img
                     key={index}
                     className="infinite-scroll-image"
