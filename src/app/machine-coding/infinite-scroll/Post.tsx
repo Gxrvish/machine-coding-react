@@ -1,42 +1,44 @@
 import React, { useEffect } from "react";
 
+import type { PostItem } from "./InfiniteScroll";
+
 interface PostProps {
-    data: Array<{
-        download_url: string;
-        [key: string]: unknown;
-    }>;
+    data: PostItem[];
     setPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Post: React.FC<PostProps> = ({ data, setPage }) => {
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            if (entry.isIntersecting) {
-                observer.unobserve(entry.target);
-                setPage((prevPage) => prevPage + 1);
-            }
-        });
-        const lastImage = document.querySelector(
+        if (data.length === 0) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const first = entries[0];
+                if (first.isIntersecting) {
+                    setPage((prev) => prev + 1);
+                }
+            },
+            { threshold: 1 }, // trigger when fully in view
+        );
+
+        // Observe the last image
+        const lastImg = document.querySelector(
             ".infinite-scroll-image:last-child",
         );
-        if (lastImage) {
-            observer.observe(lastImage);
-        }
-        return () => {
-            observer.disconnect();
-        };
+        if (lastImg) observer.observe(lastImg);
+
+        return () => observer.disconnect();
     }, [data, setPage]);
 
     return (
         <div className="infinite-scroll-container">
-            {data.map((item: any, index: number) => (
+            {data.map((item, index) => (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                    key={index}
+                    key={item.id}
                     className="infinite-scroll-image"
                     src={item.download_url}
-                    alt={`Image ${index + 1}`}
+                    alt={`Image ${index + 1} by ${item.author}`}
                 />
             ))}
         </div>
