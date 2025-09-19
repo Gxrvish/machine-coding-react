@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "React Machine Coding",
@@ -8,14 +9,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-    }: Readonly<{
+}: Readonly<{
     children: React.ReactNode;
-    }>) {
+}>) {
     return (
         <html lang="en" foxified="">
-            <body>
-                {children}
-            </body>
+            <body>{children}</body>
         </html>
     );
 }
