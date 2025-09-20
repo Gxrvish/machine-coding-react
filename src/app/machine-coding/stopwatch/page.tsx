@@ -1,12 +1,13 @@
-import Stopwatch from './Stopwatch'
-import "./Stopwatch.css"
+import "./Stopwatch.css";
+
+import Stopwatch from "./Stopwatch";
 
 const page = () => {
     return (
         <>
             <Stopwatch />
         </>
-    )
-}
+    );
+};
 
-export default page
+export default page;

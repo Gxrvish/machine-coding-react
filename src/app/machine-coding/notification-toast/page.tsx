@@ -1,9 +1,7 @@
-import NotificationToast from "./notificationToast"
+import NotificationToast from "./notificationToast";
 
 const Notification = () => {
-    return (
-        <NotificationToast />
-    )
-}
+    return <NotificationToast />;
+};
 
-export default Notification
+export default Notification;

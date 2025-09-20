@@ -1,5 +1,5 @@
-import Accordion from "./Accordion"
-import data from "./data.json"
+import Accordion from "./Accordion";
+import data from "./data.json";
 
 interface QnA {
     question: string;
@@ -9,12 +9,12 @@ interface QnA {
 const Faq = () => {
     return (
         <div>
-            <h1 className='heading'>FAQ's</h1>
+            <h1 className="heading">FAQ&apos;s</h1>
             {data.faqs.map((obj: QnA, index: number) => {
-                return <Accordion qna={obj} key={index} />
+                return <Accordion qna={obj} key={index} />;
             })}
         </div>
-    )
-}
+    );
+};
 
-export default Faq
+export default Faq;

@@ -1,6 +1,7 @@
-"use client"
-import { useState } from 'react';
-import "./Accordion.css"
+"use client";
+import "./Accordion.css";
+
+import { useState } from "react";
 
 interface AccordionProps {
     qna: any;
@@ -13,13 +14,18 @@ const Accordion = ({ qna }: AccordionProps) => {
         <div className="accordion">
             <h3>
                 {qna.question}
-                <span className='extend' onClick={() => { setShow(!show) }}>
+                <span
+                    className="extend"
+                    onClick={() => {
+                        setShow(!show);
+                    }}
+                >
                     {show ? "-" : "+"}
                 </span>
             </h3>
             {show && <p>{qna.answer}</p>}
         </div>
-    )
-}
+    );
+};
 
-export default Accordion
+export default Accordion;

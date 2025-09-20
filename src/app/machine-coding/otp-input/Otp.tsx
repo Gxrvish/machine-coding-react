@@ -1,6 +1,7 @@
-"use client"
-import React, { useEffect, useRef, useCallback } from 'react'
-import './otp.css'
+"use client";
+import "./otp.css";
+
+import React, { useCallback, useEffect, useRef } from "react";
 
 const Otp = ({ otpLength = 6 }) => {
     const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -8,9 +9,9 @@ const Otp = ({ otpLength = 6 }) => {
         (e: React.KeyboardEvent<HTMLInputElement>, index: number) => {
             const key = e.key;
             const input = inputRefs.current[index];
-            if (key === 'ArrowLeft' || key === 'ArrowRight') {
+            if (key === "ArrowLeft" || key === "ArrowRight") {
                 e.preventDefault();
-                const targetIndex = key === 'ArrowLeft' ? index - 1 : index + 1;
+                const targetIndex = key === "ArrowLeft" ? index - 1 : index + 1;
                 inputRefs.current[targetIndex]?.focus();
                 return;
             }
@@ -20,19 +21,18 @@ const Otp = ({ otpLength = 6 }) => {
                 inputRefs.current[index + 1]?.focus();
                 return;
             }
-            if (key === 'Backspace') {
+            if (key === "Backspace") {
                 e.preventDefault();
-                if (input) input.value = '';
+                if (input) input.value = "";
                 inputRefs.current[index - 1]?.focus();
                 return;
             }
-            if (key !== 'Tab') {
+            if (key !== "Tab") {
                 e.preventDefault();
             }
         },
-        []
+        [],
     );
-
 
     useEffect(() => {
         inputRefs.current[0]?.focus();
@@ -47,7 +47,9 @@ const Otp = ({ otpLength = 6 }) => {
                     inputMode="numeric"
                     maxLength={1}
                     className="otp-input"
-                    ref={(el) => { inputRefs.current[index] = el }}
+                    ref={(el) => {
+                        inputRefs.current[index] = el;
+                    }}
                     onKeyDown={(e) => handleKeyDown(e, index)}
                 />
             ))}

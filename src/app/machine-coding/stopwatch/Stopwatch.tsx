@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState, type ChangeEvent } from "react";
+import { type ChangeEvent, useEffect, useRef, useState } from "react";
 
 const Stopwatch = () => {
     const [time, setTime] = useState({
@@ -11,7 +11,10 @@ const Stopwatch = () => {
     const [isRunning, setIsRunning] = useState(false);
     const intervalRef = useRef<number | null>(null);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>, field: "hour" | "minute" | "second") => {
+    const handleChange = (
+        e: ChangeEvent<HTMLInputElement>,
+        field: "hour" | "minute" | "second",
+    ) => {
         const inputValue = Math.max(0, parseInt(e.target.value, 10) || 0);
         const newTime = { ...time, [field]: inputValue };
 
@@ -107,7 +110,9 @@ const Stopwatch = () => {
                 <button className="btn-start" onClick={handleStart}>
                     {isRunning ? "Pause" : "Start"}
                 </button>
-                <button className="btn-reset" onClick={handleReset}>Reset</button>
+                <button className="btn-reset" onClick={handleReset}>
+                    Reset
+                </button>
             </div>
         </div>
     );

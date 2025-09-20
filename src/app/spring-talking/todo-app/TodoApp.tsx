@@ -1,12 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-    getTodos,
-    createTodo,
-    updateTodo,
-    deleteTodo,
-} from "./api";
+
+import { createTodo, deleteTodo, getTodos, updateTodo } from "./api";
 
 interface Todo {
     id: number;
@@ -58,7 +54,10 @@ export default function Home() {
                     placeholder="New todo..."
                     className="flex-grow p-2 border rounded"
                 />
-                <button onClick={handleAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
+                <button
+                    onClick={handleAdd}
+                    className="bg-blue-500 text-white px-4 py-2 rounded"
+                >
                     Add
                 </button>
             </div>

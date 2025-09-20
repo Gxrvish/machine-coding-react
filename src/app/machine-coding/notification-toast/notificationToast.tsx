@@ -1,6 +1,7 @@
 "use client";
+import "./notification.css";
+
 import { useState } from "react";
-import './notification.css'
 
 type ToastType = "success" | "info" | "warning" | "danger";
 
@@ -19,27 +20,29 @@ const NotificationToast = () => {
 
         setTimeout(() => {
             setToasts((prevToasts) =>
-                prevToasts.filter((toast) => toast.id !== newToast.id)
+                prevToasts.filter((toast) => toast.id !== newToast.id),
             );
         }, 5000);
     };
 
     const handleClose = (id: number) => {
-        setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id));
+        setToasts((prevToasts) =>
+            prevToasts.filter((toast) => toast.id !== id),
+        );
     };
 
     const getColor = (type: ToastType) => {
         switch (type) {
-        case "success":
-            return "bg-green-500";
-        case "info":
-            return "bg-blue-500";
-        case "warning":
-            return "bg-yellow-500 text-black";
-        case "danger":
-            return "bg-red-500";
-        default:
-            return "bg-gray-500";
+            case "success":
+                return "bg-green-500";
+            case "info":
+                return "bg-blue-500";
+            case "warning":
+                return "bg-yellow-500 text-black";
+            case "danger":
+                return "bg-red-500";
+            default:
+                return "bg-gray-500";
         }
     };
 
@@ -53,7 +56,10 @@ const NotificationToast = () => {
                         className={`toast text-white px-4 py-2 rounded shadow-lg flex justify-between items-center w-72 ${getColor(toast.type)}`}
                     >
                         <span>{toast.message}</span>
-                        <button onClick={() => handleClose(toast.id)} className="ml-4 font-bold">
+                        <button
+                            onClick={() => handleClose(toast.id)}
+                            className="ml-4 font-bold"
+                        >
                             ×
                         </button>
                     </div>

@@ -1,16 +1,18 @@
 "use client";
-import { useState } from 'react'
-import ProgressBar from './ProgressBar'
-import "./ProgressBar.css"
+import "./ProgressBar.css";
 
-const page = () => {
+import { useState } from "react";
+
+import ProgressBar from "./ProgressBar";
+
+const Page = () => {
     const [show, setShow] = useState(false);
     return (
         <div className="wrapwrap">
             {show && <ProgressBar />}
             <button onClick={() => setShow(!show)}>Toggle</button>
         </div>
-    )
-}
+    );
+};
 
-export default page
+export default Page;

@@ -1,11 +1,11 @@
-import Post from "./Post"
+import Post from "./Post";
 
 const PagePagination = () => {
     return (
         <>
             <Post />
         </>
-    )
-}
+    );
+};
 
-export default PagePagination
+export default PagePagination;
