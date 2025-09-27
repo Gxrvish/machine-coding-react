@@ -4,7 +4,6 @@ import { getFoldersInsideMachineCoding } from "./utils";
 
 const MachineCoding = () => {
     const folders = getFoldersInsideMachineCoding();
-    console.log(folders);
 
     return (
         <div className="h-screen flex justify-center items-center">
