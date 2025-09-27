@@ -1,0 +1,23 @@
+.snake-container {
+    border : 1px solid black;
+    display: flex;
+}
+
+.cell {
+    height         : 1rem;
+    width          : 1rem;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding        : 1px;
+    border         : 0.5px solid black;
+}
+
+.food-cell {
+    background-color: red;
+    border-radius   : 50%;
+}
+
+.snake-cell {
+    background-color: seagreen;
+}
