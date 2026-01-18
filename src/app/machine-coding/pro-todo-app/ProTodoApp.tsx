@@ -1,17 +1,21 @@
 "use client";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-import { increment } from "./counterSlice";
+import ProTodoList from "./ProTodoList";
 import type { RootState } from "./store";
 
 const ProTodoApp = () => {
-    const count = useSelector((state: RootState) => state.counter.value);
-    const dispatch = useDispatch();
+    const todos = useSelector((state: RootState) => state.todos);
     return (
-        <div>
-            ProTodoApp
-            <button onClick={() => dispatch(increment())}>{count}</button>
+        <div className="h-screen flex justify-center items-center bg-emerald-200">
+            <div className="relative flex flex-col rounded-lg bg-white shadow-sm border border-slate-200">
+                <nav className="flex min-w-[240px] flex-col gap-1 p-1.5">
+                    {todos.map((item) => {
+                        return <ProTodoList id={item.id} key={item.id} />;
+                    })}
+                </nav>
+            </div>
         </div>
     );
 };
