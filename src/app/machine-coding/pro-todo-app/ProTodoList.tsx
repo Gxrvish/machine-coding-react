@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Dialog from "../generic-dialog/dialog";
@@ -16,6 +16,17 @@ const ProTodoList = (props: Props) => {
     const dispatch = useDispatch();
     const [open, setOpen] = useState(false);
     const todo = todos.find((todo) => todo.id === props.id);
+    useEffect(() => {
+        const handleKeydown = (ev: KeyboardEvent) => {
+            if (ev.key === "Enter" || ev.key === "Escape") {
+                setOpen(false);
+            }
+        };
+        window.addEventListener("keydown", handleKeydown);
+        return () => {
+            window.removeEventListener("keydown", handleKeydown);
+        };
+    }, []);
     return (
         todo && (
             <>
@@ -29,7 +40,7 @@ const ProTodoList = (props: Props) => {
                 >
                     <input
                         type="text"
-                        className=""
+                        className="border-1"
                         value={todo?.title}
                         onChange={(ev) =>
                             dispatch(
