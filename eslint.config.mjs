@@ -1,6 +1,5 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import prettier from "eslint-config-prettier";
-import pluginPrettier from "eslint-plugin-prettier";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import eslintPluginUnusedImports from "eslint-plugin-unused-imports";
 import { dirname } from "path";
@@ -18,7 +17,6 @@ const eslintConfig = [
 
     {
         plugins: {
-            prettier: pluginPrettier,
             "unused-imports": eslintPluginUnusedImports,
             "simple-import-sort": simpleImportSort,
         },
@@ -50,16 +48,6 @@ const eslintConfig = [
             // Sort and group imports
             "simple-import-sort/imports": "error",
             "simple-import-sort/exports": "error",
-
-            // Prettier formatting
-            "prettier/prettier": [
-                "error",
-                {
-                    singleQuote: false,
-                    tabWidth: 4,
-                    useTabs: false,
-                },
-            ],
 
             // General good practices
             eqeqeq: ["error", "always"],

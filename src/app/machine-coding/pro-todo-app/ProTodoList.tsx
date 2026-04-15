@@ -50,7 +50,7 @@ const ProTodoList = (props: Props) => {
                                         ev.target.value === ""
                                             ? todo.title
                                             : ev.target.value,
-                                }),
+                                })
                             )
                         }
                     />
