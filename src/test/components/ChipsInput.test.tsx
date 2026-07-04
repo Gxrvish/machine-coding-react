@@ -1,9 +1,9 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 import { describe, expect, it } from "vitest";
 
-import ChipsInput from "@/app/machine-coding/chips-input/ChipsInput";
+import ChipsInput from "@/app/chips-input/ChipsInput";
 
 describe("ChipsInput", () => {
     it("adds and deletes chips", async () => {

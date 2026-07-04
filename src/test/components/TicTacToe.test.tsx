@@ -1,8 +1,8 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 import { describe, expect, it } from "vitest";
 
-import TicTacToe from "@/app/machine-coding/tic-tac-toe/TicTacToe";
+import TicTacToe from "@/app/tic-tac-toe/TicTacToe";
 
 describe("TicTacToe", () => {
     it("plays moves and declares a winner", () => {

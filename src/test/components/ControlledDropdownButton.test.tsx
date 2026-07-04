@@ -1,10 +1,10 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import React from "react";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
-import { ControlledDropdownButton } from "@/app/machine-coding/controlled-dropdown-button/ControlledDropdownButton";
-import { Registry } from "@/app/machine-coding/registry";
+import { ControlledDropdownButton } from "@/app/controlled-dropdown-button/ControlledDropdownButton";
+import { Registry } from "@/app/registry";
 
 type Country = {
     code: string;

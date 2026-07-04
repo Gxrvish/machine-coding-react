@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import FileExplorer from "@/app/machine-coding/file-explorer/FileExplorer";
+import FileExplorer from "@/app/file-explorer/FileExplorer";
 
 describe("FileExplorer", () => {
     it("toggles nested items for folders", () => {

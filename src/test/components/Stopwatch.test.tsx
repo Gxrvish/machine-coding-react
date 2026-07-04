@@ -1,8 +1,8 @@
-import React from "react";
 import { act, fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import Stopwatch from "@/app/machine-coding/stopwatch/Stopwatch";
+import Stopwatch from "@/app/stopwatch/Stopwatch";
 
 describe("Stopwatch", () => {
     beforeEach(() => {

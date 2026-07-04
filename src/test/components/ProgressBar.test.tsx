@@ -1,8 +1,8 @@
-import React from "react";
 import { act, render } from "@testing-library/react";
+import React from "react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import ProgressBar from "@/app/machine-coding/progress-bar/ProgressBar";
+import ProgressBar from "@/app/progress-bar/ProgressBar";
 
 describe("ProgressBar", () => {
     beforeEach(() => {

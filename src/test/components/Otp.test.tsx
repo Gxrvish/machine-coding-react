@@ -1,8 +1,8 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 import { describe, expect, it } from "vitest";
 
-import Otp from "@/app/machine-coding/otp-input/Otp";
+import Otp from "@/app/otp-input/Otp";
 
 describe("Otp", () => {
     it("renders configured input count and auto-focuses first input", () => {

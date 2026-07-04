@@ -1,8 +1,8 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 import { describe, expect, it } from "vitest";
 
-import Accordion from "@/app/machine-coding/accordion/Accordion";
+import Accordion from "@/app/accordion/Accordion";
 
 describe("Accordion", () => {
     it("toggles answer visibility", () => {

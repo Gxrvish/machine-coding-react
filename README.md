@@ -27,7 +27,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000` and then go to `http://localhost:3000/machine-coding`.
+Open `http://localhost:3000` and then go to `http://localhost:3000/<your-challenge>`.
 
 ## Learning Workflow (Recommended)
 
@@ -43,45 +43,43 @@ Use the reusable component checklist in [docs/REUSABLE_COMPONENT_PLAYBOOK.md](do
 
 ## Challenge Map
 
-All challenge routes live under `/machine-coding/<challenge-name>`.
+All challenge routes live under `/<challenge-name>`.
 
 | Challenge | Route | Interview Focus |
 | --- | --- | --- |
-| Accordion | `/machine-coding/accordion` | Controlled state, keyboard interactions |
-| Chips Input | `/machine-coding/chips-input` | Input parsing, keyboard UX |
-| Controlled Dropdown Button | `/machine-coding/controlled-dropdown-button` | Controlled components, event handling |
-| File Explorer | `/machine-coding/file-explorer` | Recursive rendering, tree state |
-| Generic Dialog | `/machine-coding/generic-dialog` | Portals, focus management, composability |
-| Grid Row Sortable Filterable | `/machine-coding/grid-row-sortable-filterable` | Data transforms, sort/filter architecture |
-| Images Carousel | `/machine-coding/images-carousel` | Navigation state, transitions |
-| Images Pagination | `/machine-coding/images-pagination` | API fetching, pagination patterns |
-| Infinite Scroll | `/machine-coding/infinite-scroll` | Progressive loading, viewport handling |
-| Interactive Shape | `/machine-coding/interactive-shape` | SVG/canvas-style interaction modeling |
-| Markdown Preview | `/machine-coding/markdown-preview` | Parsing pipeline, editor-preview sync |
-| Notification Toast | `/machine-coding/notification-toast` | Queueing, timers, transient UI |
-| OTP Input | `/machine-coding/otp-input` | Input orchestration, focus chaining |
-| Pro Todo App | `/machine-coding/pro-todo-app` | Global state design, predictable updates |
-| Progress Bar | `/machine-coding/progress-bar` | Timed state updates, visual feedback |
-| Search Ahead | `/machine-coding/search-ahead` | Query handling, async UX |
-| Snake Game | `/machine-coding/snake-game` | Game loop, grid simulation |
-| Star Rating | `/machine-coding/star-rating` | Interactive rating primitives |
-| Stopwatch | `/machine-coding/stopwatch` | Timers, control flow |
-| Tab Form | `/machine-coding/tab-form` | Multi-step forms, state partitioning |
-| Tic Tac Toe | `/machine-coding/tic-tac-toe` | Grid logic, winner detection |
-| Virtualized List Performance | `/machine-coding/virtualized-list-performance` | Rendering performance, virtualization |
+| Accordion | `/<challenge-name>` | Controlled state, keyboard interactions |
+| Chips Input | `/<challenge-name>` | Input parsing, keyboard UX |
+| Controlled Dropdown Button | `/<challenge-name>` | Controlled components, event handling |
+| File Explorer | `/<challenge-name>` | Recursive rendering, tree state |
+| Generic Dialog | `/<challenge-name>` | Portals, focus management, composability |
+| Grid Row Sortable Filterable | `/<challenge-name>` | Data transforms, sort/filter architecture |
+| Images Carousel | `/<challenge-name>` | Navigation state, transitions |
+| Images Pagination | `/<challenge-name>` | API fetching, pagination patterns |
+| Infinite Scroll | `/<challenge-name>` | Progressive loading, viewport handling |
+| Interactive Shape | `/<challenge-name>` | SVG/canvas-style interaction modeling |
+| Markdown Preview | `/<challenge-name>` | Parsing pipeline, editor-preview sync |
+| Notification Toast | `/<challenge-name>` | Queueing, timers, transient UI |
+| OTP Input | `/<challenge-name>` | Input orchestration, focus chaining |
+| Pro Todo App | `/<challenge-name>` | Global state design, predictable updates |
+| Progress Bar | `/<challenge-name>` | Timed state updates, visual feedback |
+| Search Ahead | `/<challenge-name>` | Query handling, async UX |
+| Snake Game | `/<challenge-name>` | Game loop, grid simulation |
+| Star Rating | `/<challenge-name>` | Interactive rating primitives |
+| Stopwatch | `/<challenge-name>` | Timers, control flow |
+| Tab Form | `/<challenge-name>` | Multi-step forms, state partitioning |
+| Tic Tac Toe | `/<challenge-name>` | Grid logic, winner detection |
+| Virtualized List Performance | `/<challenge-name>` | Rendering performance, virtualization |
 
 ## Repo Structure
 
 ```text
 src/
 	app/
-		page.tsx                       # Minimal home page
-		machine-coding/
-			page.tsx                     # Challenge links
-			<challenge>/
-				page.tsx                   # Route entry for the challenge
-				<ChallengeComponent>.tsx   # Main implementation
-				*.css / data / notes       # Optional support files
+		page.tsx                     # Challenge links
+		<challenge>/
+			page.tsx                   # Route entry for the challenge
+			<ChallengeComponent>.tsx   # Main implementation
+			*.css / data / notes       # Optional support files
 ```
 
 ## What "Interview-Ready Reusable" Means Here
@@ -108,7 +106,7 @@ At minimum, each new challenge should include:
 1. A clear problem statement.
 2. A reusable component API expectation.
 3. Edge cases and evaluation criteria.
-4. A working route under `/machine-coding/<slug>`.
+4. A working route under `/<slug>`.
 
 ## Scripts
 

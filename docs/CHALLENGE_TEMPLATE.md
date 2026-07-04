@@ -1,6 +1,6 @@
 # Challenge Template
 
-Copy this template when adding a new machine-coding challenge.
+Copy this template when adding a new Machine Coding challenge.
 
 ---
 

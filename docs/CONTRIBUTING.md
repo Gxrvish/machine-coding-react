@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Thanks for improving this machine-coding playground.
+Thanks for improving this Machine Coding playground.
 
 The goal of contributions is to help learners practice interview-style component development with reusable design patterns.
 
@@ -21,7 +21,7 @@ npm run lint
 
 ## Add a New Challenge
 
-1. Pick a kebab-case folder name under `src/app/machine-coding/`.
+1. Pick a kebab-case folder name under `src/app/`.
 2. Add a `page.tsx` for the route entry.
 3. Add the main component file (for example, `YourComponent.tsx`).
 4. Add optional supporting files (`*.css`, `data.json`, utilities).
@@ -32,7 +32,7 @@ The challenge list page is folder-driven, so new folders appear automatically.
 ## Suggested Challenge Folder Layout
 
 ```text
-src/app/machine-coding/<your-challenge>/
+src/app/<your-challenge>/
   page.tsx
   <YourChallenge>.tsx
   <YourChallenge>.md
@@ -72,7 +72,7 @@ npm run build
 
 Then verify manually:
 
-- Route loads at `/machine-coding/<your-challenge>`.
+- Route loads at `/<your-challenge>`.
 - Core interactions work with keyboard and mouse.
 - Empty/error/edge states are handled.
 - Challenge markdown matches actual behavior.

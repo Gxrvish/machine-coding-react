@@ -1,8 +1,8 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
+import React from "react";
 import { describe, expect, it } from "vitest";
 
-import StarRating from "@/app/machine-coding/star-rating/StarRating";
+import StarRating from "@/app/star-rating/StarRating";
 
 describe("StarRating", () => {
     it("updates highlighted stars on hover", () => {

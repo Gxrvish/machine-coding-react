@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import SearchAhead from "@/app/machine-coding/search-ahead/SearchAhead";
+import SearchAhead from "@/app/search-ahead/SearchAhead";
 
 describe("SearchAhead", () => {
     afterEach(() => {

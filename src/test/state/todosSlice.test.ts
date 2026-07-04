@@ -5,7 +5,7 @@ import reducer, {
     editTodo,
     removeTodo,
     toggleTodo,
-} from "@/app/machine-coding/pro-todo-app/todosSlice";
+} from "@/app/pro-todo-app/todosSlice";
 
 describe("todosSlice", () => {
     it("returns initial state", () => {
