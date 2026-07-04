@@ -47,28 +47,28 @@ All challenge routes live under `/<challenge-name>`.
 
 | Challenge | Route | Interview Focus |
 | --- | --- | --- |
-| Accordion | `/<challenge-name>` | Controlled state, keyboard interactions |
-| Chips Input | `/<challenge-name>` | Input parsing, keyboard UX |
-| Controlled Dropdown Button | `/<challenge-name>` | Controlled components, event handling |
-| File Explorer | `/<challenge-name>` | Recursive rendering, tree state |
-| Generic Dialog | `/<challenge-name>` | Portals, focus management, composability |
-| Grid Row Sortable Filterable | `/<challenge-name>` | Data transforms, sort/filter architecture |
-| Images Carousel | `/<challenge-name>` | Navigation state, transitions |
-| Images Pagination | `/<challenge-name>` | API fetching, pagination patterns |
-| Infinite Scroll | `/<challenge-name>` | Progressive loading, viewport handling |
-| Interactive Shape | `/<challenge-name>` | SVG/canvas-style interaction modeling |
-| Markdown Preview | `/<challenge-name>` | Parsing pipeline, editor-preview sync |
-| Notification Toast | `/<challenge-name>` | Queueing, timers, transient UI |
-| OTP Input | `/<challenge-name>` | Input orchestration, focus chaining |
-| Pro Todo App | `/<challenge-name>` | Global state design, predictable updates |
-| Progress Bar | `/<challenge-name>` | Timed state updates, visual feedback |
-| Search Ahead | `/<challenge-name>` | Query handling, async UX |
-| Snake Game | `/<challenge-name>` | Game loop, grid simulation |
-| Star Rating | `/<challenge-name>` | Interactive rating primitives |
-| Stopwatch | `/<challenge-name>` | Timers, control flow |
-| Tab Form | `/<challenge-name>` | Multi-step forms, state partitioning |
-| Tic Tac Toe | `/<challenge-name>` | Grid logic, winner detection |
-| Virtualized List Performance | `/<challenge-name>` | Rendering performance, virtualization |
+| Accordion | `/accordion` | Controlled state, keyboard interactions |
+| Chips Input | `/chips-input` | Input parsing, keyboard UX |
+| Controlled Dropdown Button | `/controlled-dropdown-button` | Controlled components, event handling |
+| File Explorer | `/file-explorer` | Recursive rendering, tree state |
+| Generic Dialog | `/generic-dialog` | Portals, focus management, composability |
+| Grid Row Sortable Filterable | `/grid-row-sortable-filterable` | Data transforms, sort/filter architecture |
+| Images Carousel | `/images-carousel` | Navigation state, transitions |
+| Images Pagination | `/images-pagination` | API fetching, pagination patterns |
+| Infinite Scroll | `/infinite-scroll` | Progressive loading, viewport handling |
+| Interactive Shape | `/interactive-shape` | SVG/canvas-style interaction modeling |
+| Markdown Preview | `/markdown-preview` | Parsing pipeline, editor-preview sync |
+| Notification Toast | `/notification-toast` | Queueing, timers, transient UI |
+| OTP Input | `/otp-input` | Input orchestration, focus chaining |
+| Pro Todo App | `/pro-todo-app` | Global state design, predictable updates |
+| Progress Bar | `/progress-bar` | Timed state updates, visual feedback |
+| Search Ahead | `/search-ahead` | Query handling, async UX |
+| Snake Game | `/snake-game` | Game loop, grid simulation |
+| Star Rating | `/star-rating` | Interactive rating primitives |
+| Stopwatch | `/stopwatch` | Timers, control flow |
+| Tab Form | `/tab-form` | Multi-step forms, state partitioning |
+| Tic Tac Toe | `/tic-tac-toe` | Grid logic, winner detection |
+| Virtualized List Performance | `/virtualized-list-performance` | Rendering performance, virtualization |
 
 ## Repo Structure
 
