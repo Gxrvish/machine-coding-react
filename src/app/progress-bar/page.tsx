@@ -1,4 +1,6 @@
 "use client";
+
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./ProgressBar.css";
 
 import { useState } from "react";

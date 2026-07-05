@@ -1,18 +1,18 @@
 .container {
-    display: flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items    : center;
+    height         : 100vh;
 }
 
 .input-container {
     input {
-        border: 1px solid black;
-        margin: 1rem;
-        padding: 0.8rem;
-        height: 3rem;
-        width: 6rem;
+        border    : 1px solid black;
+        margin    : 1rem;
+        padding   : 0.8rem;
+        height    : 3rem;
+        width     : 6rem;
         text-align: center;
     }
 
@@ -23,11 +23,11 @@
 
 .btn-container {
     button {
-        margin: 1rem;
-        padding: 0.5rem;
-        border: 1px solid black;
-        border-radius: 10%;
+        margin          : 1rem;
+        padding         : 0.5rem;
+        border          : 1px solid black;
+        border-radius   : 10%;
         background-color: skyblue;
-        color: black;
+        color           : black;
     }
 }

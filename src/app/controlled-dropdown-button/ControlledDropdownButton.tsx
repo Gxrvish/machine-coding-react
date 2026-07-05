@@ -33,8 +33,8 @@ export function ControlledDropdownButton<T>({
             fullList.filter((item) =>
                 String(item[labelKey])
                     .toLowerCase()
-                    .includes(input.toLowerCase()),
-            ),
+                    .includes(input.toLowerCase())
+            )
         );
     };
 
@@ -60,11 +60,11 @@ export function ControlledDropdownButton<T>({
 
     const handleListKeyDown = (ev: React.KeyboardEvent<HTMLDivElement>) => {
         const items = Array.from(
-            ev.currentTarget.querySelectorAll('[role="menuitem"]'),
+            ev.currentTarget.querySelectorAll('[role="menuitem"]')
         ) as HTMLElement[];
 
         const currentIndex = items.findIndex(
-            (el) => el === document.activeElement,
+            (el) => el === document.activeElement
         );
         if (ev.key === "ArrowDown") {
             ev.preventDefault();
@@ -142,7 +142,7 @@ export function ControlledDropdownButton<T>({
                                 role="menuitem"
                                 tabIndex={0}
                                 key={String(
-                                    valueKey ? item[valueKey] : item[labelKey],
+                                    valueKey ? item[valueKey] : item[labelKey]
                                 )}
                                 className="px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 cursor-pointer outline-none"
                                 onKeyDown={(ev) => handleKeydown(item, ev)}

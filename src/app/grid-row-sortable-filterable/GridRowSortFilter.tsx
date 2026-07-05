@@ -26,12 +26,12 @@ export default function GridRowSortFilter<T extends Record<string, unknown>>({
 
     const columns = useMemo(
         () => (data.length > 0 ? (Object.keys(data[0]) as (keyof T)[]) : []),
-        [data],
+        [data]
     );
 
     const visibleColumns = useMemo(
         () => columns.filter((c) => !hiddenColumns.has(c)),
-        [columns, hiddenColumns],
+        [columns, hiddenColumns]
     );
 
     const sortedData = useMemo(() => {
@@ -49,7 +49,7 @@ export default function GridRowSortFilter<T extends Record<string, unknown>>({
             return String(a).localeCompare(String(b));
         };
         return [...data].sort((a, b) =>
-            order === "asc" ? compare(a[key], b[key]) : compare(b[key], a[key]),
+            order === "asc" ? compare(a[key], b[key]) : compare(b[key], a[key])
         );
     }, [data, sortConfig]);
 
@@ -74,7 +74,7 @@ export default function GridRowSortFilter<T extends Record<string, unknown>>({
         setSortConfig((prev) =>
             prev?.key === key
                 ? { key, order: prev.order === "asc" ? "desc" : "asc" }
-                : { key, order: "asc" },
+                : { key, order: "asc" }
         );
 
     if (!data?.length) return <div>No data available</div>;
@@ -98,7 +98,7 @@ export default function GridRowSortFilter<T extends Record<string, unknown>>({
                 {showOverlay && (
                     <div
                         ref={overlayRef}
-                        className="absolute top-[47px] left-1/2 -translate-x-1/2 bg-white border rounded shadow-md p-3 z-50"
+                        className="absolute top-11.75 left-1/2 -translate-x-1/2 bg-white border rounded shadow-md p-3 z-50"
                     >
                         {columns.map((col) => (
                             <label

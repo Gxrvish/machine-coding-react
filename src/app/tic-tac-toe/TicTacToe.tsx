@@ -7,7 +7,7 @@ import { checkWinner } from "./util";
 
 const TicTacToe = ({ gridSize }: { gridSize: number }) => {
     const [board, setBoard] = useState(
-        Array.from({ length: gridSize }, () => Array(gridSize).fill(null)),
+        Array.from({ length: gridSize }, () => Array(gridSize).fill(null))
     );
     const [turnX, setTurnX] = useState(true);
     const [winner, setWinner] = useState("");
@@ -32,7 +32,7 @@ const TicTacToe = ({ gridSize }: { gridSize: number }) => {
 
     const handleReset = () => {
         setBoard(
-            Array.from({ length: gridSize }, () => Array(gridSize).fill(null)),
+            Array.from({ length: gridSize }, () => Array(gridSize).fill(null))
         );
         setTurnX(true);
         setWinner("");

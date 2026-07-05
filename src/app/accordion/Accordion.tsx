@@ -1,10 +1,13 @@
 "use client";
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./Accordion.css";
 
 import { useState } from "react";
 
+import type { QnA } from "./Faq";
+
 interface AccordionProps {
-    qna: any;
+    qna: QnA;
     key: number | string;
 }
 

@@ -1,4 +1,6 @@
 "use client";
+
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./notification.css";
 
 import { useState } from "react";
@@ -20,14 +22,14 @@ const NotificationToast = () => {
 
         setTimeout(() => {
             setToasts((prevToasts) =>
-                prevToasts.filter((toast) => toast.id !== newToast.id),
+                prevToasts.filter((toast) => toast.id !== newToast.id)
             );
         }, 5000);
     };
 
     const handleClose = (id: number) => {
         setToasts((prevToasts) =>
-            prevToasts.filter((toast) => toast.id !== id),
+            prevToasts.filter((toast) => toast.id !== id)
         );
     };
 

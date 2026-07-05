@@ -40,7 +40,7 @@ const ProTodoList = (props: Props) => {
                 >
                     <input
                         type="text"
-                        className="border-1"
+                        className="border"
                         value={todo?.title}
                         onChange={(ev) =>
                             dispatch(

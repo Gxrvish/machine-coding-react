@@ -2,7 +2,7 @@ export function checkWinner(
     board: string[][],
     row: number,
     col: number,
-    player: boolean,
+    player: boolean
 ) {
     const playerSymbol = player ? "X" : "O";
     // Row
@@ -17,7 +17,7 @@ export function checkWinner(
         row + col === board.length - 1 &&
         board.every(
             (r: string[], idx: number) =>
-                r[board.length - 1 - idx] === playerSymbol,
+                r[board.length - 1 - idx] === playerSymbol
         )
     )
         return true;

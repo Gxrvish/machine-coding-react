@@ -1,7 +1,7 @@
 import Accordion from "./Accordion";
 import data from "./data.json";
 
-interface QnA {
+export interface QnA {
     question: string;
     answer: string;
 }

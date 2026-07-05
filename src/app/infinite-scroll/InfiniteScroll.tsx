@@ -18,7 +18,7 @@ const InfiniteScroll = () => {
         const fetchData = async () => {
             try {
                 const res = await fetch(
-                    `https://picsum.photos/v2/list?page=${page}&limit=3`,
+                    `https://picsum.photos/v2/list?page=${page}&limit=3`
                 );
                 if (!res.ok)
                     throw new Error(`HTTP error! status: ${res.status}`);

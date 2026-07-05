@@ -20,7 +20,7 @@ const InputField: React.FC<InputFieldProps> = ({
     <div className="flex justify-end my-3">
         <label className="mr-3 my-auto">{label}: </label>
         <input
-            className="border-1 p-2"
+            className="border p-2"
             type="radio"
             name={name}
             value={optionValue}

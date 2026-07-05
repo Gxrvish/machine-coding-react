@@ -9,7 +9,7 @@ interface InputFieldProps {
     name: keyof ProfileData;
     onChange: (
         e: ChangeEvent<HTMLInputElement>,
-        name: keyof ProfileData,
+        name: keyof ProfileData
     ) => void;
 }
 
@@ -23,7 +23,7 @@ const InputField: React.FC<InputFieldProps> = ({
     <div className="flex justify-end my-3">
         <label className="mr-3 my-auto">{label}: </label>
         <input
-            className="border-1 p-2"
+            className="border p-2"
             type={type}
             value={value}
             onChange={(e) => onChange(e, name)}
@@ -34,7 +34,7 @@ const InputField: React.FC<InputFieldProps> = ({
 const Profile: React.FC<ProfileProps> = ({ data, setData }) => {
     const handleInputChange = (
         e: ChangeEvent<HTMLInputElement>,
-        name: keyof ProfileData,
+        name: keyof ProfileData
     ) => {
         const value = name === "age" ? Number(e.target.value) : e.target.value;
         setData((prev) => ({

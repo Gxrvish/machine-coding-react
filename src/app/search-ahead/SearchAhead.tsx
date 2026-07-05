@@ -1,4 +1,6 @@
 "use client";
+
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./SearchAhead.css";
 
 import { useEffect, useRef, useState } from "react";
@@ -12,9 +14,11 @@ const STATUS = {
 const SearchAhead = () => {
     const [query, setQuery] = useState("");
     const [data, setData] = useState<{
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         products: Array<{ id: number; name: string; [key: string]: any }>;
     }>({ products: [] });
     const [status, setStatus] = useState(STATUS.LOADING);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const cache = useRef<{ [key: string]: any }>({});
 
     useEffect(() => {
@@ -30,7 +34,7 @@ const SearchAhead = () => {
                 }
                 const response = await fetch(
                     `https://dummyjson.com/products/search?q=${query}`,
-                    { signal },
+                    { signal }
                 );
                 if (!response.ok) {
                     throw new Error("Network response was not ok");

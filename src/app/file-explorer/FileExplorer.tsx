@@ -1,4 +1,5 @@
 "use client";
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./FileExplorer.css";
 
 import { useState } from "react";

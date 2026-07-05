@@ -37,7 +37,7 @@ const SnakeGame: React.FC<SnakeGameProps> = ({ gridSize = 20 }) => {
                     newHead[0] >= gridSize ||
                     newHead[1] >= gridSize ||
                     prevSnakeBody.some(
-                        ([y, x]) => y === newHead[0] && x === newHead[1],
+                        ([y, x]) => y === newHead[0] && x === newHead[1]
                     )
                 ) {
                     setDirection([0, 1]);
@@ -64,6 +64,7 @@ const SnakeGame: React.FC<SnakeGameProps> = ({ gridSize = 20 }) => {
         }, 200);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [direction, food, grow, gridSize]);
 
     useEffect(() => {
@@ -113,7 +114,7 @@ const SnakeGame: React.FC<SnakeGameProps> = ({ gridSize = 20 }) => {
                             }}
                         ></div>
                     );
-                }),
+                })
             )}
         </div>
     );

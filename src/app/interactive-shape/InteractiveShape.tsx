@@ -129,8 +129,8 @@ const InteractiveShape: React.FC<InteractiveShapeProps> = ({
                                 className="w-14 h-14"
                                 style={{ visibility: "hidden" }}
                             />
-                        ),
-                    ),
+                        )
+                    )
                 )}
             </div>
             <div>

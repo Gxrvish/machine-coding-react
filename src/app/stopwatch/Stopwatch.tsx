@@ -13,7 +13,7 @@ const Stopwatch = () => {
 
     const handleChange = (
         e: ChangeEvent<HTMLInputElement>,
-        field: "hour" | "minute" | "second",
+        field: "hour" | "minute" | "second"
     ) => {
         const inputValue = Math.max(0, parseInt(e.target.value, 10) || 0);
         const newTime = { ...time, [field]: inputValue };

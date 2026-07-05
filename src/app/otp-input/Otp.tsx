@@ -1,4 +1,6 @@
 "use client";
+
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./otp.css";
 
 import React, { useCallback, useEffect, useRef } from "react";
@@ -31,7 +33,7 @@ const Otp = ({ otpLength = 6 }) => {
                 e.preventDefault();
             }
         },
-        [],
+        []
     );
 
     useEffect(() => {

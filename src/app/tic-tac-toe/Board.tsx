@@ -30,7 +30,7 @@ const Board = ({ board, size, handleClick, cellSize = 50 }: BoardProps) => {
                     >
                         {cell}
                     </div>
-                )),
+                ))
             )}
         </div>
     );

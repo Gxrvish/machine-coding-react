@@ -1,4 +1,6 @@
 "use client";
+
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./ImagesCarousel.css";
 
 import { useEffect, useState } from "react";
@@ -19,7 +21,7 @@ const ImagesCarousel = () => {
         setLoading(true);
         try {
             const response = await fetch(
-                `https://picsum.photos/v2/list?page=${page}&limit=${LIMIT}`,
+                `https://picsum.photos/v2/list?page=${page}&limit=${LIMIT}`
             );
             const newImages = await response.json();
             setData((prev) => [...prev, ...newImages]);
@@ -60,6 +62,7 @@ const ImagesCarousel = () => {
                     <div className="loading-spinner">Loading...</div>
                 ) : (
                     data[currentIndex] && (
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img
                             key={data[currentIndex].id}
                             src={data[currentIndex].download_url}

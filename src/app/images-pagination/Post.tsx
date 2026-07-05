@@ -1,4 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
+
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./pagination.css";
 
 import { useEffect, useState } from "react";

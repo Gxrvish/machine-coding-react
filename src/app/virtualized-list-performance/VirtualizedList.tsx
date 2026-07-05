@@ -30,7 +30,7 @@ export default function VirtualizedList() {
         setStart((prevStart) => {
             const nextStart = Math.min(
                 prevStart + STEP,
-                data.length - WINDOW_SIZE,
+                data.length - WINDOW_SIZE
             );
             setVisible(data.slice(nextStart, nextStart + WINDOW_SIZE));
             return nextStart;
@@ -45,7 +45,7 @@ export default function VirtualizedList() {
             (entries) => {
                 if (entries[0].isIntersecting) loadPrevious();
             },
-            { threshold: 1 },
+            { threshold: 1 }
         );
 
         if (firstRef.current) topObserver.current.observe(firstRef.current);
@@ -62,7 +62,7 @@ export default function VirtualizedList() {
             (entries) => {
                 if (entries[0].isIntersecting) loadNext();
             },
-            { threshold: 1 },
+            { threshold: 1 }
         );
 
         if (lastRef.current) bottomObserver.current.observe(lastRef.current);

@@ -1,3 +1,4 @@
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./globals.css";
 
 import type { Metadata } from "next";

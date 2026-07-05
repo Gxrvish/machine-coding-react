@@ -1,5 +1,6 @@
 "use client";
 
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./dialog.css";
 
 import { faXmark } from "@fortawesome/free-solid-svg-icons";

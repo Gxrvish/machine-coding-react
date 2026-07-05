@@ -1,3 +1,4 @@
+// @ts-expect-error: side-effect CSS import without type declarations
 import "./starRating.css";
 
 import { useState } from "react";

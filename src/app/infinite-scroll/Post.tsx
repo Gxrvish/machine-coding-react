@@ -18,12 +18,12 @@ const Post: React.FC<PostProps> = ({ data, setPage }) => {
                     setPage((prev) => prev + 1);
                 }
             },
-            { threshold: 1 }, // trigger when fully in view
+            { threshold: 1 } // trigger when fully in view
         );
 
         // Observe the last image
         const lastImg = document.querySelector(
-            ".infinite-scroll-image:last-child",
+            ".infinite-scroll-image:last-child"
         );
         if (lastImg) observer.observe(lastImg);
 
